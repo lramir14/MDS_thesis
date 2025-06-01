@@ -1,10 +1,3 @@
-# This is the repository for my master's thesis on Data Science. 
-
-Feel Free to explore the notebooks. 
-
-For information about the datasets please contact me at: lfrr93@gmail.com  So I can send them to you. Otherwise they are also available on Kaggle but are set as private so I am able to invite you as a guest. 
-
-
 # 📢 Presidential Echoes: A Systemic Analysis of López Obrador’s Conferences and News Coverage
 
 > A master's thesis on the intersection of political communication and natural language processing in Mexico (2018–2024).
@@ -31,7 +24,7 @@ Feel free to explore the Jupyter notebooks and code included in this project.
 The datasets are not publicly included in the repository. If you're interested in accessing them:
 
 - Contact me via email: `lfrr93@gmail.com`
-- Alternatively, I can invite you as a guest to my private Kaggle datasets
+- Alternatively, I can invite you as a guest to my private Kaggle datasets because they are set as "private" datasets. 
 
 ---
 
