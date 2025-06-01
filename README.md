@@ -51,3 +51,12 @@ Fixed Effects OLS to estimate similarity across outlets
 Time-Series Regression with lagged similarity
 
 Rolling averages for temporal trend analysis
+
+📊 Key Findings
+Media outlets generally follow the presidential narrative (average similarity ≈ 0.30)
+
+Two outlets (Infobae & Proceso) consistently diverged, suggesting critical editorial positions
+
+Similarity increased in the final years of the administration (2023–2024)
+
+Statistical significance found in time-lagged relationships and outlet-specific effects
