@@ -5,58 +5,92 @@ Feel Free to explore the notebooks.
 For information about the datasets please contact me at: lfrr93@gmail.com  So I can send them to you. Otherwise they are also available on Kaggle but are set as private so I am able to invite you as a guest. 
 
 
-📢 Presidential Echoes: A Systemic Analysis of López Obrador’s Conferences and News Coverage
-Author: Luis Fernando Ramírez Ruiz
-Program: Master of Data Science for Public Policy – Hertie School
-Thesis Supervisor: Prof. Dr. Arianna Ornaghi
-Thesis Date: May 2025
-Repository URL: github.com/lramir14/MDS_thesis
+# 📢 Presidential Echoes: A Systemic Analysis of López Obrador’s Conferences and News Coverage
 
+> A master's thesis on the intersection of political communication and natural language processing in Mexico (2018–2024).
 
-📝 Overview
-This repository contains all data processing scripts, models, and analysis pipelines used in the master's thesis "Presidential Echoes: A Systemic Analysis of López Obrador’s Conferences and News Coverage." The project investigates how Mexico’s presidential daily press conferences (2018–2024) influenced national media coverage.
+---
 
-Using advanced NLP techniques such as topic modeling, sentence embeddings, and cosine similarity, this work builds a framework to analyze over 2,300 presidential speeches and 36,000 news articles.
+## 🎓 Thesis Metadata
 
-📌 Research Questions
-How are Mexican media outlets covering daily presidential press conferences?
+- **Author:** Luis Fernando Ramírez Ruiz  
+- **Program:** Master of Data Science for Public Policy – Hertie School  
+- **Thesis Supervisor:** Prof. Dr. Arianna Ornaghi  
+- **Thesis Date:** May 2025  
+- **Repository URL:** [github.com/lramir14/MDS_thesis](https://github.com/lramir14/MDS_thesis)  
+- **Contact:** lfrr93@gmail.com  
 
-Can we quantify the semantic similarity between what the president says and what media report?
+---
 
-Which outlets reproduce the presidential narrative, and which deviate?
+## 🧭 Introduction
 
-🔍 Methodology
-📚 Data Collection
-Presidential Speeches: Scraped from AMLO's official archive
+Welcome to the repository for my master's thesis in data science.  
+Feel free to explore the Jupyter notebooks and code included in this project.
 
-Media Articles: Scraped from Google News using a headless Selenium-based bot with VPN support
+**📩 Access to Data**  
+The datasets are not publicly included in the repository. If you're interested in accessing them:
 
-🧹 Preprocessing
-Language: Spanish (Spacy's es_core_news_md)
+- Contact me via email: `lfrr93@gmail.com`
+- Alternatively, I can invite you as a guest to my private Kaggle datasets
 
-Custom stopword lists
+---
 
-Paragraph-level text chunking
+## 📝 Project Overview
 
-🧠 NLP Techniques
-Topic Modeling: LDA (Latent Dirichlet Allocation)
+This project investigates how Mexico’s daily presidential press conferences (2018–2024) influenced national media coverage.
 
-Embeddings: hiiamsid/sentence_similarity_spanish_es (BERT-based)
+Using advanced NLP methods — including **topic modeling**, **sentence embeddings**, and **cosine similarity** — the analysis explores how closely media outlets followed or deviated from the presidential narrative.
 
-Similarity: Cosine similarity between embedded paragraphs
+**Corpus Summary:**
 
-📈 Statistical Modeling
-Fixed Effects OLS to estimate similarity across outlets
+- 🗣 **2,300+** Press conferences  
+- 📰 **36,000+** News articles  
 
-Time-Series Regression with lagged similarity
+---
 
-Rolling averages for temporal trend analysis
+## 📌 Research Questions
 
-📊 Key Findings
-Media outlets generally follow the presidential narrative (average similarity ≈ 0.30)
+- How are Mexican media outlets covering daily presidential press conferences?
+- Can we quantify the semantic similarity between what the president says and what media outlets report?
+- Which outlets reproduce the presidential narrative, and which deviate?
 
-Two outlets (Infobae & Proceso) consistently diverged, suggesting critical editorial positions
+---
 
-Similarity increased in the final years of the administration (2023–2024)
+## 🔍 Methodology
 
-Statistical significance found in time-lagged relationships and outlet-specific effects
+### 📚 Data Collection
+
+- **Speeches:** Scraped from [AMLO's official website](https://amlo.presidente.gob.mx/secciones/version-estenografica/)
+- **News Articles:** Scraped from Google News (2018–2024) using a Selenium-based scraper with VPN access
+
+### 🧹 Preprocessing
+
+- Language: Spanish (`spacy` – `es_core_news_md`)
+- Tokenization, stopword removal, custom filters
+- Paragraph-level chunking (4 sentences per chunk)
+
+### 🧠 NLP Techniques
+
+- **Topic Modeling:** LDA via `scikit-learn`
+- **Embeddings:** [`hiiamsid/sentence_similarity_spanish_es`](https://huggingface.co/hiiamsid/sentence_similarity_spanish_es) (BERT-based)
+- **Similarity Metric:** Cosine similarity between embedded chunks
+
+### 📈 Statistical Modeling
+
+- **Model 1:** Fixed Effects OLS (media outlet, month/year dummies)
+- **Model 2:** Time-Series Regression with lagged similarity variables
+- **Additional:** Rolling average trends, residual diagnostics, clustering
+
+---
+
+## 📊 Key Findings
+
+- Media outlets on average followed the **presidential narrative**, with a similarity score of ~**0.30**
+- **Infobae** and **Proceso** consistently **diverged**, suggesting more critical editorial stances
+- **Similarity increased over time**, especially in 2023–2024, indicating growing narrative alignment
+- Results suggest that the **impact of press conferences is measurable and non-trivial**, but not uniformly strong
+
+---
+
+## 📁 Repository Structure
+
