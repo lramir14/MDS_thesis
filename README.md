@@ -85,5 +85,3 @@ Using advanced NLP methods — including **topic modeling**, **sentence embeddin
 
 ---
 
-## 📁 Repository Structure
-
